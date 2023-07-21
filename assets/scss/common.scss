@@ -1,0 +1,104 @@
+:root {
+  --container-padding: 135px;
+  --container-width: 1440px;
+}
+
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  vertical-align: baseline;
+  appearance: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  color: $main-text;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 30px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $main-bg;
+}
+
+button,
+input {
+  all: unset;
+  color: $main-text;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 1px solid white;
+  }
+}
+
+a {
+  color: $main-text;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+}
+
+.visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.page {
+  display: grid;
+}
+
+.button {
+  display: grid;
+  place-content: center;
+  padding: 14px 30px;
+  border-radius: 6px;
+  color: $main-text;
+  font-weight: 500;
+  background-color: $button-bg;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
