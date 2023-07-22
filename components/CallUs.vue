@@ -1,55 +1,52 @@
 <template>
-  <client-only>
-    <section id="call" class="call">
-      <div class="container">
-        <div class="call__container">
-          <p class="call__text">
-            Стать нашим клиентом очень просто. Для этого вы можете отправить запрос на коммерческое
-            предложение, либо на выставление счета. Вам необходимо лишь позвонить нам по телефону
-            или
-            отправить электронное письмо, и мы постараемся оперативно рассмотреть вашу заявку.
-            Надеемся, что мы сможем установить с вами прочные, долговременные и взаимовыгодные
-            отношения, как и с другими нашими многочисленными клиентами
-          </p>
-          <div class="call__form-container">
-            <div class="call__action">
-              <div class="arrow" />
-              <h2 class="call__title">
-                Закажите звонок
-              </h2>
-              <p class="call__description">
-                Оставьте заявку, наши специалисты свяжутся с вами и ответят на все вопросы
-              </p>
-            </div>
-            <form
-              class="call__form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST"
-              name="contact"
-            >
-              <input name="form-name" type="hidden" value="contact">
-              <p hidden>
-                <label>Don’t fill this out: <input name="bot-field"></label>
-              </p>
-              <label>
-                <input class="call__input" name="Name" placeholder="Ваше имя" type="text">
-              </label>
-              <label>
-                <input class="call__input" name="Phone" placeholder="Ваш номер" type="tel">
-              </label>
-              <label>
-                <input class="call__input" name="Email" placeholder="Ваш e-mail" type="email">
-              </label>
-              <p class="call__agreement">
-                Нажимая на кнопку , я соглашаюсь на обработку персональных данных
-              </p>
-              <button class="button call__button" type="submit">
-                Отправить
-              </button>
-            </form>
+  <section id="call" class="call">
+    <div class="container">
+      <div class="call__container">
+        <p class="call__text">
+          Стать нашим клиентом очень просто. Для этого вы можете отправить запрос на коммерческое
+          предложение, либо на выставление счета. Вам необходимо лишь позвонить нам по телефону или
+          отправить электронное письмо, и мы постараемся оперативно рассмотреть вашу заявку.
+          Надеемся, что мы сможем установить с вами прочные, долговременные и взаимовыгодные
+          отношения, как и с другими нашими многочисленными клиентами
+        </p>
+        <div class="call__form-container">
+          <div class="call__action">
+            <div class="arrow" />
+            <h2 class="call__title">
+              Закажите звонок
+            </h2>
+            <p class="call__description">
+              Оставьте заявку, наши специалисты свяжутся с вами и ответят на все вопросы
+            </p>
           </div>
+          <form
+            class="call__form" method="POST" name="contact" data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact">
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field"></label>
+            </p>
+            <label>
+              <input class="call__input" name="name" placeholder="Ваше имя" type="text">
+            </label>
+            <label>
+              <input class="call__input" name="phone" placeholder="Ваш номер" type="tel">
+            </label>
+            <label>
+              <input class="call__input" name="email" placeholder="Ваш e-mail" type="email">
+            </label>
+            <p class="call__agreement">
+              Нажимая на кнопку , я соглашаюсь на обработку персональных данных
+            </p>
+            <button class="button call__button" type="submit">
+              Отправить
+            </button>
+          </form>
         </div>
       </div>
-    </section>
-  </client-only>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
