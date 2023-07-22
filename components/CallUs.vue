@@ -19,7 +19,14 @@
               Оставьте заявку, наши специалисты свяжутся с вами и ответят на все вопросы
             </p>
           </div>
-          <form class="call__form" method="POST" name="contact" netlify>
+          <form
+            class="call__form" method="POST" name="contact" data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact">
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field"></label>
+            </p>
             <label>
               <input class="call__input" name="Name" placeholder="Ваше имя" type="text">
             </label>
@@ -127,7 +134,7 @@
     gap: 20px;
 
     & label {
-      &:first-child {
+      &:nth-child(3) {
         grid-column: 1 / -1;
       }
     }
