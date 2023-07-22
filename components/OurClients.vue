@@ -9,21 +9,23 @@ const clients = [
 </script>
 
 <template>
-  <section class="clients container">
-    <h2 class="clients__title">
-      Наши клиенты
-    </h2>
-    <ul class="clients__list">
-      <li v-for="(client, idx) of clients" :key="idx" class="clients__item">
-        <div class="clients__picture">
-          <img :src="client.img" alt="" loading="lazy">
-        </div>
-        <p class="clients__name">
-          {{ client.title }}
-        </p>
-      </li>
-    </ul>
-  </section>
+  <client-only>
+    <section class="clients container">
+      <h2 class="clients__title">
+        Наши клиенты
+      </h2>
+      <ul class="clients__list">
+        <li v-for="(client, idx) of clients" :key="idx" class="clients__item">
+          <div class="clients__picture">
+            <img :src="client.img" alt="" loading="lazy">
+          </div>
+          <p class="clients__name">
+            {{ client.title }}
+          </p>
+        </li>
+      </ul>
+    </section>
+  </client-only>
 </template>
 
 <style lang="scss">
