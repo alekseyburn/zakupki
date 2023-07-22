@@ -19,14 +19,20 @@
               Оставьте заявку, наши специалисты свяжутся с вами и ответят на все вопросы
             </p>
           </div>
-          <form action="" class="call__form">
-            <input class="call__input" placeholder="Ваше имя" type="text">
-            <input class="call__input" placeholder="Ваш номер" type="number">
-            <input class="call__input" placeholder="Ваш e-mail" type="email">
+          <form class="call__form" method="POST" name="contact" netlify>
+            <label>
+              <input class="call__input" name="Name" placeholder="Ваше имя" type="text">
+            </label>
+            <label>
+              <input class="call__input" name="Phone" placeholder="Ваш номер" type="tel">
+            </label>
+            <label>
+              <input class="call__input" name="Email" placeholder="Ваш e-mail" type="email">
+            </label>
             <p class="call__agreement">
               Нажимая на кнопку , я соглашаюсь на обработку персональных данных
             </p>
-            <button class="button call__button">
+            <button class="button call__button" type="submit">
               Отправить
             </button>
           </form>
@@ -119,19 +125,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+
+    & label {
+      &:first-child {
+        grid-column: 1 / -1;
+      }
+    }
   }
 
   &__input {
+    width: 100%;
     padding: 15px 22px;
     border-radius: 6px;
     color: $alter-text;
     font-size: 17px;
     line-height: 20px;
     background: rgba(0, 9, 60, 0.10);
-
-    &:first-child {
-      grid-column: 1 / -1;
-    }
   }
 
   &__agreement {
