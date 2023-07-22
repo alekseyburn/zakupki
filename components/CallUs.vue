@@ -20,7 +20,7 @@
             </p>
           </div>
           <form
-            class="call__form" method="POST" name="contact" data-netlify="true"
+            class="call__form" method="POST" name="contact" action="/form" data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contact">
